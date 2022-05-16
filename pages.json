@@ -1,0 +1,138 @@
+{
+	"pages": [
+	{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登陆",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "主页",
+                "enablePullDownRefresh": false,
+				"navigationStyle":"custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/job/job-index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "职位主页（详情）",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/message/message-index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消息主页",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+        }
+        ,{
+            "path" : "pages/my-center/my-center",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-center/set",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "设置",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-center/change-password",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改登录密码",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-center/change-tr-password",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "修改交易密码",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-center/cv/my-cv/my-cv",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的简历",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-center/base-info",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "基本信息",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"height": "6vh",
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"borderStyle": "white",
+		"backgroundColor": "#F8F8F8",
+		"list":[{
+			"pagePath": "pages/index/index",
+			"text": "主页"
+		},{
+			"pagePath": "pages/message/message-index",
+			"text": "消息"
+		},{
+			"pagePath": "pages/my-center/my-center",
+			"text": "我的"
+		}]
+	},
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^hz-(.*):":"@/components/hz-$1.vue"
+		}
+	}
+}

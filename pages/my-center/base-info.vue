@@ -61,11 +61,12 @@
 </template>
 
 <script>
-import pickerAddress from '../../components/ss-select-city/pickerAddress.vue';
-	export default {
-    components: {
-      pickerAddress
-    },
+// import pickerAddress from '@/components/ss-select-city/pickerAddress.vue
+export default {
+    // components: {
+    //   pickerAddress
+    // },
+	
 		data() {
 			return {
         sexValue:0,
@@ -123,10 +124,10 @@ import pickerAddress from '../../components/ss-select-city/pickerAddress.vue';
 	    this.timeIndex = index
 	    this.anyDate = '选择出生日期'
 	  },
-      cityChange(data) {
-		  console.log(data)
-       this.cityArea  = data.data.join("")
-      }
+    //   cityChange(data) {
+		  // console.log(data)
+    //    this.cityArea  = data.data.join("")
+    //   }
 		}
 	}
 </script>

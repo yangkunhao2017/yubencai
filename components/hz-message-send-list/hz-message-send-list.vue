@@ -1,10 +1,14 @@
 <template>
 	<view style="background-color: #f6f6f6">
 		<view class="uni-flex uni-row item-box">
-      <button class="item-box-active">待查看</button>
-      <button>已查看</button>
-      <button>约面试</button>
-      <button>不合适</button>
+      <button class="item-box-active" v-if="isUser">待查看</button>
+	  <button class="item-box-active" v-else="isUser">待确认</button>
+      <button v-if="isUser">已查看</button>
+	  <button v-else="isUser">约面试</button>
+	  <button v-if="isUser">约面试</button>
+	  <button v-else="isUser">已同意</button>
+      <button v-if="isUser">不合适</button>
+	  <button v-else="isUser">不合适</button>
     </view>
     <view class="uni-flex uni-column">
       <view class="uni-flex uni-column item-item" v-for="i in 10">
@@ -48,6 +52,7 @@
 		name:"hz-message-send-list",
 		data() {
 			return {
+				isUser:false,
         status:0,
 				type: 3,
 			};

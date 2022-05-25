@@ -6,7 +6,7 @@
 				<text style="margin-left: 60px;">请假</text>
 				</view>
 				<view class="title-ding uni-flex view view-right">
-				<text style="margin-right: 10px;">历史记录</text>
+				<text  style="margin-right: 10px;">历史记录</text>
 				</view>
 			</view>
 		</view>
@@ -152,19 +152,19 @@
 	}
 	.bottom-box {
 		width: 100%;
-	  height: 80px;
+	  /* height: 10px; */
 	  background-color: #0c7cf9;
 	}
 	.title-text {
 		color: #FFFFFF;
 		font-size: 18px;
 		font-family: sans-serif;
-		margin-top: 20px;
+		/* margin-top: 20px; */
 	}
 	.title-ding {
 		color:#ffffff;
 		font-size: 16px;
-		margin-top: 20px;
+		/* margin-top: 20px; */
 	}
 	.popup-add{
 	  height: 300px;

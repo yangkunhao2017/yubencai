@@ -107,19 +107,19 @@
 	}
 	.bottom-box {
 		width: 100%;
-	  height: 80px;
+	  /* height: 50px; */
 	  background-color: #0c7cf9;
 	}
 	.title-text {
 		color: #FFFFFF;
 		font-size: 18px;
 		font-family: sans-serif;
-		margin-top: 20px;
+		/* margin-top: 20px; */
 	}
 	.title-ding {
 		color:#ffffff;
 		font-size: 16px;
-		margin-top: 20px;
+		/* margin-top: 20px; */
 	}
 	
 	.list-item{

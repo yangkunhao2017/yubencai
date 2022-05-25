@@ -1,6 +1,7 @@
 <template>
 	<view>
-		<view class="uni-flex uni-column title-box">
+		<view class="uni-flex uni-column title-box"
+		:class="isUser?' title-box-user':'title-box-com'">
       <view class="uni-flex uni-row view-right">
         <view>
           <text class="option"><uni-icons type="gear-filled"></uni-icons>设置</text>
@@ -9,23 +10,29 @@
       <view class="uni-flex uni-row view-between account-info-box">
         <view class="uni-flex uni-row view-center">
           <view>
-            <image class="message-list-box-logo" src="../../../static/logo.png" ></image>
+            <image class="message-list-box-logo" src="../../../static/logo.png" v-if="isUser"></image>
+			<image class="message-list-box-logo" src="../../../static/logo.png" v-else="isUser"></image>
           </view>
           <view style="margin-left: 10px">
             <view>
-              <text>李聪</text>
+              <text v-if="isUser">李聪</text>
+			  <text style="color: #fff;" v-else="isUser">重庆梦比优斯网络科技有限公司</text>
             </view>
             <view>
-              <text>6年工作经验/26岁/本科</text>
+              <text v-if="isUser">6年工作经验/26岁/本科</text>
+			  <view class="uni-flex uni-row" style="color:orange;margin-top: 5px;" v-else="isUser">
+			  <uni-icons type="phone-filled" color="orange"></uni-icons>
+			 <text style="margin-left: 10px;"> 已认证</text>
+			  </view>
             </view>
           </view>
         </view>
-        <view class="clock">
-          <text><uni-icons type="map-pin-ellipse"></uni-icons>打卡</text>
+        <view class="clock" v-if="isUser">
+          <text ><uni-icons type="map-pin-ellipse" > </uni-icons>打卡</text>
         </view>
       </view>
     </view>
-    <view class="option-box uni-flex uni-row view-vertical-center">
+    <view class="option-box uni-flex uni-row view-vertical-center" v-if="isUser">
       <view class="bg uni-flex uni-row">
         <view class="item">
           <view class="uni-flex uni-column view-center">
@@ -53,23 +60,64 @@
         </view>
       </view>
     </view>
-    <view class="list-box">
+	<view class="option-box uni-flex uni-row view-vertical-center" v-else="isUser">
+	  <view class="bg uni-flex uni-row">
+	    <view class="item">
+	      <view class="uni-flex uni-column view-center">
+	        <image src="../../../static/logo.png" ></image>
+	        <text>财务管理</text>
+	      </view>
+	    </view>
+	    <view class="item">
+	      <view class="uni-flex uni-column view-center">
+	        <image src="../../../static/logo.png" ></image>
+	        <text>职位管理</text>
+	      </view>
+	    </view>
+	    <view class="item">
+	      <view class="uni-flex uni-column view-center">
+	        <image src="../../../static/logo.png" ></image>
+	        <text>邀约记录</text>
+	      </view>
+	    </view>
+	    <view class="item">
+	      <view class="uni-flex uni-column view-center">
+	        <image src="../../../static/logo.png" ></image>
+	        <text>人力资源</text>
+	      </view>
+	    </view>
+	  </view>
+	</view>
+	<view style="border-bottom: 10px solid #EFEFF0FF;"></view>
+    <view class="list-box" v-if="isUser">
       <uni-list>
-        <uni-list-item title="我的钱包" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+        <uni-list-item  title="我的钱包" :to="`../my-center/my-wallet`" thumb="../../static/logo.png" thumb-size="lg" showArrow />
         <uni-list-item title="我的合同" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
-        <uni-list-item title="我的足迹" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
-        <uni-list-item title="求职意向" thumb="../../static/logo.png" thumb-size="lg" showArrow rightText="默认职位"/>
+        <uni-list-item title="我的足迹" :to="`../my-center/my-footprint`" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+        <uni-list-item title="求职意向" :to="`../my-center/job-wanted`" thumb="../../static/logo.png" thumb-size="lg" showArrow rightText="默认职位"/>
       </uni-list>
       <uni-list>
-        <uni-list-item title="我的部门" thumb="../../static/logo.png" thumb-size="lg" showArrow rightText="暂未加入"/>
-        <uni-list-item title="我要请假" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
-        <uni-list-item title="我要报销" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+        <uni-list-item title="我的部门" :to="`../my-center/department`" thumb="../../static/logo.png" thumb-size="lg" showArrow rightText="暂未加入"/>
+        <uni-list-item title="我要请假" :to="`../my-center/leave/leave`" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+        <uni-list-item title="我要报销" :to="`../my-center/reimbursement`" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
       </uni-list>
       <uni-list>
-        <uni-list-item title="意见反馈" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+        <uni-list-item title="意见反馈" :to="`../my-center/feedback`" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
         <uni-list-item title="退出登录" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
       </uni-list>
     </view>
+	<view class="list-box" v-else="isUser">
+	  <uni-list>
+	    <uni-list-item  title="企业钱包" :to="`../my-center/my-wallet`" thumb="../../static/logo.png" thumb-size="lg" showArrow />
+	    <uni-list-item title="部门管理" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+	    <uni-list-item title="审批管理" :to="`../my-center/my-footprint`" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+	    <uni-list-item title="员工合同" :to="`../my-center/job-wanted`" thumb="../../static/logo.png" thumb-size="lg" showArrow />
+	    <uni-list-item title="员工考勤" :to="`../my-center/department`" thumb="../../static/logo.png" thumb-size="lg" showArrow />
+	    <uni-list-item title="企业认证" :to="`../my-center/leave/leave`" thumb="../../static/logo.png" thumb-size="lg" showArrow rightText="未认证"/>
+	    <uni-list-item title="意见反馈" :to="`../my-center/reimbursement`" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+	    <uni-list-item title="退出登录" thumb="../../static/logo.png" thumb-size="lg" showArrow/>
+	  </uni-list>
+	</view>
     <view class="bottom">
 
     </view>
@@ -82,7 +130,7 @@
     components: {UniSection},
     data() {
 			return {
-				
+				isUser:false,
 			}
 		},
 		methods: {
@@ -100,11 +148,16 @@ button:after{
 
 .title-box{
   height: 150px;
-  background: #2f6ce8;
+  
   display: flex;
   justify-content: space-between;
 }
-
+.title-box-com {
+	background: #fc4039;
+}
+.title-boox-user {
+	background: #2f6ce8;
+}
 .title-box .option{
   color: #fff;
   font-size: 20px;

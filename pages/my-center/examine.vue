@@ -1,12 +1,12 @@
 <template>
 	<view>
-		<view class="bottom-box">
+	<!-- 	<view class="bottom-box">
 			<view class="uni-flex uni-row ">
 				<view class="uni-flex title-text view-vertical-center">
 				<text >审批人</text>
 				</view>
 			</view>
-		</view>
+		</view> -->
 		<view style="border-bottom: 12px solid #ececec;"></view>
 		<view class="uni-flex uni-row" style="margin-top: 10px;">
 		<view class="uni-flex uni-row view-center" style="margin-left: 10px;margin: 10px;">
@@ -95,7 +95,7 @@
 		</uni-collapse-item>
 		</uni-collapse>
 		<view style="border-bottom: 250px solid #ececec;"></view>
-		<view class="uni-flex uni-row view-between view-center" style="margin-top: 10px;margin-bottom: 10px;">
+		<view class="uni-flex uni-row view-between view-center" style="margin-top: 50px;">
 			<text style="color: #0c7cf9;margin-left: 10px;">已选择: 1人</text>
 			<button class="button-of">确定</button>
 		</view>

@@ -5,8 +5,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "登陆",
-                "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
             }
             
         }
@@ -52,8 +52,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "我的",
-                "enablePullDownRefresh": false
-				// "navigationStyle": "custom"
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
             }
             
         }
@@ -61,8 +61,18 @@
             "path" : "pages/my-center/set",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "设置",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"webviewBGTransparent": true,
+					"mask": "none",
+					"opacity": 0.9,
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
             }
             
         }
@@ -70,8 +80,18 @@
             "path" : "pages/my-center/change-password",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "修改登录密码",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"webviewBGTransparent": true,
+					"mask": "none",
+					"opacity": 0.9,
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
             }
             
         }
@@ -80,7 +100,17 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "修改交易密码",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"webviewBGTransparent": true,
+					"mask": "none",
+					"opacity": 0.9,
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
             }
             
         }
@@ -131,8 +161,18 @@
             "path" : "pages/my-center/my-wallet",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "我的钱包",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"webviewBGTransparent": true,
+					"mask": "none",
+					"opacity": 0.9,
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
             }
             
         }
@@ -140,9 +180,9 @@
             "path" : "pages/my-center/yueb",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "渝额宝",
-                "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
             }
             
         }
@@ -151,8 +191,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
             }
             
         }
@@ -179,9 +219,9 @@
             "path" : "pages/my-center/leave/leave",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "请假",
-                "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
             }
             
         }
@@ -190,8 +230,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
             }
             
         }
@@ -201,17 +241,27 @@
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+				// "transparentTitle":"always"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"webviewBGTransparent": true,
+					"mask": "none",
+					"opacity": 0.9,
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
             }
             
         }
         ,{
-            "path" : "pages/my-center/Reimbursement",
+            "path" : "pages/my-center/reimbursement",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
             }
             
         }
@@ -219,9 +269,58 @@
             "path" : "pages/my-center/examine",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "审批人",
+                "enablePullDownRefresh": false
+				// "navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/my-center/feedback",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "意见反馈",
                 "enablePullDownRefresh": false,
-				"navigationStyle": "custom"
+				"navigationStyle": "custom",
+				"app-plus": {
+					"animationType": "fade-in", // 设置fade-in淡入动画，为最合理的动画类型
+					"background": "transparent", // 背景透明
+					"backgroundColor": "rgba(0,0,0,0)", // 背景透明
+					"webviewBGTransparent": true,
+					"mask": "none",
+					"opacity": 0.9,
+					"popGesture": "none" // 关闭IOS屏幕左边滑动关闭当前页面的功能
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/to-examine/to-examine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "审批管理",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fc4039"
+            }
+            
+        }
+        ,{
+            "path" : "pages/to-examine/write-off",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "审批管理",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fc4039"
+            }
+            
+        }
+        ,{
+            "path" : "pages/to-examine/handle",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "审批管理",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fc4039"
             }
             
         }
@@ -229,7 +328,7 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#2f6ce8",
+		"navigationBarBackgroundColor": "#0c7cf9",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {
 			"background": "#efeff4"

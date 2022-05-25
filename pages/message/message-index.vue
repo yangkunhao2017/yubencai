@@ -1,14 +1,16 @@
 <template>
 	<view>
-		<view class="message-title-box uni-flex uni-column">
+		<view class="message-title-box uni-flex uni-column"
+		:class="isUser?' title-box-user':'title-box-com'">
       <view class="uni-flex message-title-box-title">
         <text class="message-title-box-title-text">消息通知</text>
       </view>
       <view class="message-title-box-select uni-flex uni-row">
         <view class="uni-flex uni-row">
           <text :class="showLable!=0?'message-title-box-select-item':'message-title-box-select-item-active'" @click="changeShowLableIndex(0)">消息列表</text>
-          <text :class="showLable!=1?'message-title-box-select-item':'message-title-box-select-item-active'" @click="changeShowLableIndex(1)">我的投递</text>
-          <text :class="showLable!=2?'message-title-box-select-item':'message-title-box-select-item-active'" @click="changeShowLableIndex(2)">企业消息</text>
+          <text :class="showLable!=1?'message-title-box-select-item':'message-title-box-select-item-active'" @click="changeShowLableIndex(1)" v-if="isUser">我的投递</text>
+          <text :class="showLable!=1?'message-title-box-select-item':'message-title-box-select-item-active'" @click="changeShowLableIndex(1)" v-else="isUser">简历列表</text>
+          <text :class="showLable!=2?'message-title-box-select-item':'message-title-box-select-item-active'" @click="changeShowLableIndex(2)" v-if="isUser">企业消息</text>
         </view>
       </view>
     </view>
@@ -27,6 +29,7 @@
     components: {HzOptionMessageList, HzMessageSendList, HzMessageList},
     data() {
 			return {
+				isUser:true,
 				showLable:0,
 			}
 		},
@@ -45,10 +48,14 @@ button:after{
 }
 .message-title-box {
   height: 100px;
-  background-color: #1678ff;
   border-bottom: 1px solid #e5e5e5;
 }
-
+.title-box-com{
+		background: #fc4039;
+	}
+	.title-box-user{
+		background: #55aaff;
+	}
 .message-title-box-title {
   color: #fff;
   margin-top: 20px;
